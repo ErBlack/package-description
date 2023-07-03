@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "strict": true,
+        "allowJs": true,
+        "checkJs": true,
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "resolveJsonModule": true
+    },
+    "include": ["bin", "lib"],
+    "exclude": ["**/*.test.js"]
+}

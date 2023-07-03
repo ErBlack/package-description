@@ -1,0 +1,30 @@
+{
+  "name": "package-description",
+  "version": "0.0.0",
+  "description": "A cli tool do describe your package.json packages",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErBlack/package-description.git"
+  },
+  "keywords": [
+    "package"
+  ],
+  "author": "dev@erblack.me",
+  "license": "ISC",
+  "bin": {
+    "package-description": "./bin/package-description.js"
+  },
+  "bugs": {
+    "url": "https://github.com/ErBlack/package-description/issues"
+  },
+  "homepage": "https://github.com/ErBlack/package-description#readme",
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6"
+  }
+}

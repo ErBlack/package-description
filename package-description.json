@@ -1,0 +1,22 @@
+{
+    "dependencies": {
+        "commander": {
+            "description": "For console interface",
+            "status": "actual"
+        }
+    },
+    "devDependencies": {
+        "@types/node": {
+            "description": "Typings for nodejs",
+            "status": "actual"
+        },
+        "prettier": {
+            "description": "For fix code formatting",
+            "status": "actual"
+        },
+        "typescript": {
+            "description": "For check code",
+            "status": "actual"
+        }
+    }
+}
