@@ -1,6 +1,6 @@
 {
   "name": "package-description",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A cli tool do describe your package.json packages",
   "type": "module",
   "repository": {
