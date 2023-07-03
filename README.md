@@ -40,7 +40,7 @@ Options:
 Check package-description.json file
 
 Options:
-  --fix [fix]  Fix problems if it possible
-  -h, --help   display help for command
+  --fix       Fix problems if it possible
+  -h, --help  display help for command
 ```
 
