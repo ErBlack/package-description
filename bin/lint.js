@@ -7,9 +7,9 @@ const program = new Command();
 
 program
     .description('Check package-description.json file')
-    .option('--fix [fix]', 'Fix problems if it possible', Boolean)
+    .option('--fix', 'Fix problems if it possible')
     .action(({ fix }) => {
         return lint(fix);
     });
 
-program.parse(process.argv);
+await program.parseAsync(process.argv);

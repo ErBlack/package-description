@@ -12,4 +12,4 @@ program
         return init(force);
     });
 
-program.parse(process.argv);
+await program.parseAsync(process.argv);
