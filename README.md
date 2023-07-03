@@ -32,7 +32,7 @@ Options:
   -f, --force [force]  Replace existed file
   -h, --help           display help for command
 ```
-
+§
 ### package-description lint
 
 ```Usage: package-description lint [options]
