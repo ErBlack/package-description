@@ -5,6 +5,10 @@
     "title": "package-description.json file",
     "description": "Description for usage of packages from package.json",
     "properties": {
+        "$schema": {
+            "type": "string",
+            "const": "./node_modules/package-description/schema.json"
+        },
         "dependencies": {
             "type": "object",
             "additionalProperties": {
@@ -27,17 +31,18 @@
         "description": {
             "type": "object",
             "title": "A description of package",
-            "description": "A description of package from package.json",
+            "description": "A description of package from package.jsosn",
             "oneOf": [
                 {
                     "properties": {
                         "status": {
-                            "enum": [
-                                "actual"
-                            ]
+                            "type": "string",
+                            "const": "actual",
+                            "title": "Actual package",
+                            "description": "Recommended to use"
                         },
                         "description": {
-                            "type": "string"
+                            "$ref": "#/$defs/packageDescription"
                         }
                     },
                     "required": [
@@ -49,15 +54,18 @@
                 {
                     "properties": {
                         "status": {
-                            "enum": [
-                                "outdated"
-                            ]
+                            "type": "string",
+                            "const": "outdated",
+                            "title": "Outdate package",
+                            "description": "Should be updated to actual version"
                         },
                         "description": {
-                            "type": "string"
+                            "$ref": "#/$defs/packageDescription"
                         },
                         "issueLink": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Link to issue",
+                            "description": "Link to the issue where the package will be updated"
                         }
                     },
                     "required": [
@@ -70,18 +78,22 @@
                 {
                     "properties": {
                         "status": {
-                            "enum": [
-                                "deprecated"
-                            ]
+                            "type": "string",
+                            "const": "deprecated",
+                            "title": "Deprecated package",
+                            "description": "Should be removed"
                         },
                         "description": {
-                            "type": "string"
+                            "$ref": "#/$defs/packageDescription"
                         },
                         "issueLink": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Link to issue",
+                            "description": "Link to the issue where the package will be removed"
                         },
                         "replacement": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Package that should be used instead of deprecated"
                         }
                     },
                     "required": [
@@ -94,13 +106,13 @@
                 {
                     "properties": {
                         "status": {
-                            "enum": [
-                                "unknown"
-                            ]
+                            "type": "string",
+                            "const": "unknown",
+                            "title": "Unknown package",
+                            "description": "Not described yet"
                         },
                         "description": {
-                            "type": "string",
-                            "const": ""
+                            "$ref": "#/$defs/packageDescription"
                         }
                     },
                     "required": [
@@ -110,6 +122,11 @@
                     "additionalProperties": false
                 }
             ]
+        },
+        "packageDescription": {
+            "type": "string",
+            "title": "Description of package purpose",
+            "description": "For what purpose the package is used"
         }
     }
 }

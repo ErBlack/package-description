@@ -24,6 +24,7 @@ interface UnknownDescription {
 export type Description = ActualDescription | OutdatedDescription | DeprecatedDescription | UnknownDescription;
 
 export interface PackageDescription {
+    $schema?: string;
     dependencies: Record<string, Description>;
     devDependencies: Record<string, Description>;
 }
