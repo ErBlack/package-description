@@ -22,3 +22,14 @@ interface UnknownDescription {
 }
 
 export type Description = ActualDescription | OutdatedDescription | DeprecatedDescription | UnknownDescription;
+
+export interface PackageDescription {
+    dependencies: Record<string, Description>;
+    devDependencies: Record<string, Description>;
+}
+
+export interface Problem {
+    level: 'error' | 'warn';
+    path: string;
+    message: string;
+}

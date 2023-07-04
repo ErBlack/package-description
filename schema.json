@@ -1,0 +1,115 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "package-description.json",
+    "type": "object",
+    "title": "package-description.json file",
+    "description": "Description for usage of packages from package.json",
+    "properties": {
+        "dependencies": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/description"
+            }
+        },
+        "devDependencies": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/description"
+            }
+        }
+    },
+    "required": [
+        "dependencies",
+        "devDependencies"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+        "description": {
+            "type": "object",
+            "title": "A description of package",
+            "description": "A description of package from package.json",
+            "oneOf": [
+                {
+                    "properties": {
+                        "status": {
+                            "enum": [
+                                "actual"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "description"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "enum": [
+                                "outdated"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "issueLink": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "description",
+                        "issueLink"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "enum": [
+                                "deprecated"
+                            ]
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "issueLink": {
+                            "type": "string"
+                        },
+                        "replacement": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "description",
+                        "issueLink"
+                    ],
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "status": {
+                            "enum": [
+                                "unknown"
+                            ]
+                        },
+                        "description": {
+                            "type": "string",
+                            "const": ""
+                        }
+                    },
+                    "required": [
+                        "status",
+                        "description"
+                    ],
+                    "additionalProperties": false
+                }
+            ]
+        }
+    }
+}
