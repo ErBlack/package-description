@@ -19,8 +19,8 @@
     },
     "devDependencies": {
         "@types/node": {
-            "description": "Typings for nodejs",
-            "status": "actual"
+            "status": "actual",
+            "description": "Typings for nodejs"
         },
         "prettier": {
             "description": "For fix code formatting",
