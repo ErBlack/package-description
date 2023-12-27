@@ -24,6 +24,18 @@
             "additionalProperties": {
                 "$ref": "#/$defs/description"
             }
+        },
+        "peerDependencies": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/description"
+            }
+        },
+        "optionalDependencies": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/$defs/description"
+            }
         }
     },
     "required": ["dependencies", "devDependencies"],

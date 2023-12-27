@@ -1,0 +1,18 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "default-descriptions.json",
+    "type": "object",
+    "title": "default-descriptions.json file",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "defaults": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "./schema.json#/$defs/description"
+            }
+        }
+    },
+    "required": ["defaults"]
+}
