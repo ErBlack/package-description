@@ -19,6 +19,7 @@ Options:
 Commands:
   init            Generate a description file for a package.json
   lint            Validate a package-description.json file
+  describe        Describe a new packages
   help [command]  display help for command
 ```
 
@@ -42,5 +43,18 @@ Check package-description.json file
 Options:
   --fix       Fix problems if it possible
   -h, --help  display help for command
+```
+
+### package-description describe
+
+```Usage: package-description describe [options]
+
+Describe new packages
+
+Options:
+  -t, --type <type>  Which packages to describe. new – not described yet,
+                     unknown – with status unknown, all – both of them
+                     (choices: "new", "unknown", "all", default: "new")
+  -h, --help         display help for command
 ```
 
