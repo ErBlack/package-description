@@ -7,6 +7,14 @@
         "commander": {
             "description": "For console interface",
             "status": "actual"
+        },
+        "@inquirer/input": {
+            "status": "actual",
+            "description": "For getting prompts from user in terminal"
+        },
+        "@inquirer/select": {
+            "status": "actual",
+            "description": "For getting prompts with select from variants from user in terminal"
         }
     },
     "devDependencies": {
