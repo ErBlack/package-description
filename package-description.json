@@ -1,9 +1,7 @@
 {
+    "$schema": "./schema.json",
+    "defaultDescriptionsFile": "./default-descriptions.json",
     "dependencies": {
-        "ajv": {
-            "description": "For json schema validation",
-            "status": "actual"
-        },
         "commander": {
             "description": "For console interface",
             "status": "actual"
@@ -15,6 +13,10 @@
         "@inquirer/select": {
             "status": "actual",
             "description": "For getting prompts with select from variants from user in terminal"
+        },
+        "ajv": {
+            "status": "actual",
+            "description": "For json schema validation"
         }
     },
     "devDependencies": {

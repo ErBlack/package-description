@@ -6,8 +6,12 @@
     "description": "Description for usage of packages from package.json",
     "properties": {
         "$schema": {
+            "type": "string"
+        },
+        "defaultDescriptionsFile": {
             "type": "string",
-            "const": "./node_modules/package-description/schema.json"
+            "title": "Default descriptions file",
+            "description": "If you have default set of packages that you use in your projects, you can specify path to file with descriptions for them. This file will be used as default for describe --type new command."
         },
         "dependencies": {
             "type": "object",
@@ -22,16 +26,13 @@
             }
         }
     },
-    "required": [
-        "dependencies",
-        "devDependencies"
-    ],
+    "required": ["dependencies", "devDependencies"],
     "additionalProperties": false,
     "$defs": {
         "description": {
             "type": "object",
             "title": "A description of package",
-            "description": "A description of package from package.jsosn",
+            "description": "A description of package from package.json",
             "oneOf": [
                 {
                     "properties": {
@@ -45,10 +46,7 @@
                             "$ref": "#/$defs/packageDescription"
                         }
                     },
-                    "required": [
-                        "status",
-                        "description"
-                    ],
+                    "required": ["status", "description"],
                     "additionalProperties": false
                 },
                 {
@@ -68,11 +66,7 @@
                             "description": "Link to the issue where the package will be updated"
                         }
                     },
-                    "required": [
-                        "status",
-                        "description",
-                        "issueLink"
-                    ],
+                    "required": ["status", "description", "issueLink"],
                     "additionalProperties": false
                 },
                 {
@@ -96,11 +90,7 @@
                             "description": "Package that should be used instead of deprecated"
                         }
                     },
-                    "required": [
-                        "status",
-                        "description",
-                        "issueLink"
-                    ],
+                    "required": ["status", "description", "issueLink"],
                     "additionalProperties": false
                 },
                 {
@@ -115,10 +105,7 @@
                             "$ref": "#/$defs/packageDescription"
                         }
                     },
-                    "required": [
-                        "status",
-                        "description"
-                    ],
+                    "required": ["status", "description"],
                     "additionalProperties": false
                 }
             ]

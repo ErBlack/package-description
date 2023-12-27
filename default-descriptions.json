@@ -1,0 +1,13 @@
+{
+    "$schema": "./default-description-file-schema.json",
+    "defaults": {
+        "ajv": {
+            "description": "For json schema validation",
+            "status": "actual"
+        },
+        "commander": {
+            "description": "For console interface",
+            "status": "actual"
+        }
+    }
+}
