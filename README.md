@@ -30,8 +30,9 @@ Commands:
 Generate a description file for a package.json
 
 Options:
-  -f, --force [force]  Replace existed file
-  -h, --help           display help for command
+  -f, --force [force]                               Replace existed file
+  -d, --default-descriptions [defaultDescriptions]  Default descriptions file path
+  -h, --help                                        display help for command
 ```
 
 ### package-description lint
