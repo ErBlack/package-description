@@ -21,8 +21,11 @@ npx package-description --init
 Description of a dependency includes the status, text description, and additional fields for specific statuses. Here is a list of the statuses:
 
 `unknown` - The package is not described.
+
 `actual` - The package is actual and updated. It should have a filled `description` field providing information on what this package is used for.
+
 `outdated` - The package is outdated. It should have a filled `description` field explaining what this package is used for and an `issueLink` pointing to the relevant issue that discusses the necessary update.
+
 `deprecated` - The package should be removed. It should have a filled `description` field explaining why this package is deprecated, an `issueLink` pointing to the issue discussing its removal, and optionally a `replacement` field suggesting a recommended alternative package.
 
 ## Default descriptions
