@@ -10,7 +10,8 @@
   "scripts": {
     "docs": "node docs.js > README.md",
     "version": "npm run docs && git add README.md",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js"
   },
   "keywords": [
     "package"
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.3.2",
+    "eslint": "^8.56.0",
     "prettier": "^2.8.8",
     "typescript": "^5.1.6"
   }
