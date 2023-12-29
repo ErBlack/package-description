@@ -6,7 +6,7 @@ import { describe } from '../lib/tasks/describe.js';
 const program = new Command();
 
 program
-    .description('Describe new packages')
+    .description('Step-by-step description of new packages and packages with an unknown status with prompts.')
     .addOption(
         new Option(
             '-t, --type <type>',
