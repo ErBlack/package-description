@@ -6,7 +6,7 @@
         "strict": true,
         "allowJs": true,
         "checkJs": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "outDir": "dist",
         "moduleResolution": "node",
         "resolveJsonModule": true

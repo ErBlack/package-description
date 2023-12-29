@@ -9,7 +9,8 @@
   },
   "scripts": {
     "docs": "node docs.js > README.md",
-    "version": "npm run docs && git add README.md"
+    "version": "npm run docs && git add README.md",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "package"

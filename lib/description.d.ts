@@ -25,8 +25,11 @@ export type Description = ActualDescription | OutdatedDescription | DeprecatedDe
 
 export interface PackageDescription {
     $schema?: string;
+    defaultDescriptionsFile?: string;
     dependencies: Record<string, Description>;
     devDependencies: Record<string, Description>;
+    optionalDependencies: Record<string, Description>;
+    peerDependencies: Record<string, Description>;
 }
 
 export interface Problem {
